@@ -1,4 +1,4 @@
-mpirun -np 12 ./xhpl > data.log
+mpirun -np 12 ./xhpl > data0.log
 
 rm HPL.dat
 mv HPL1.dat HPL.dat
@@ -25,3 +25,6 @@ mpirun -np 12 ./xhpl > data4.log
 
 rm HPL.dat
 mv HPL5.dat HPL.dat
+
+mpirun -np 12 ./xhpl > data5.log
+
