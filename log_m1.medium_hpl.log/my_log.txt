@@ -1,0 +1,447 @@
+Number of Intel(R) Xeon Phi(TM) coprocessors : 0
+================================================================================
+HPLinpack 2.1  --  High-Performance Linpack benchmark  --   October 26, 2012
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :    1000     1500     2000     2500     3000     3500     4000     4500 
+            5000     5500     6000     6500     7000     7500 
+NB       :     192 
+PMAP     : Column-major process mapping
+P        :       1 
+Q        :       1 
+PFACT    :   Right 
+NBMIN    :       2 
+NDIV     :       2 
+RFACT    :   Crout 
+BCAST    :   1ring 
+DEPTH    :       0 
+SWAP     : Binary-exchange
+L1       : no-transposed form
+U        : no-transposed form
+EQUIL    : no
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=20666.15
+centos7         : Column=000384 Fraction=0.195 Kernel= 6664.16 Mflops=11446.09
+centos7         : Column=000576 Fraction=0.385 Kernel= 6106.44 Mflops= 9960.87
+centos7         : Column=000768 Fraction=0.595 Kernel= 4357.23 Mflops= 9197.42
+centos7         : Column=000960 Fraction=0.795 Kernel= 1847.45 Mflops= 8764.22
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        1000   192     1     1               0.08            8.66342e+00
+HPL_pdgesv() start time Tue Jan  9 06:23:17 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:17 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0067842 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=42603.14
+centos7         : Column=000384 Fraction=0.130 Kernel=10757.32 Mflops=18813.76
+centos7         : Column=000576 Fraction=0.260 Kernel=11453.97 Mflops=16369.24
+centos7         : Column=000768 Fraction=0.385 Kernel=10597.22 Mflops=15263.64
+centos7         : Column=000960 Fraction=0.515 Kernel= 9008.04 Mflops=14527.55
+centos7         : Column=001152 Fraction=0.655 Kernel= 6821.61 Mflops=13981.08
+centos7         : Column=001344 Fraction=0.795 Kernel= 3956.90 Mflops=13589.47
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        1500   192     1     1               0.17            1.33444e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:17 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:18 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0050085 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=66066.35
+centos7         : Column=000384 Fraction=0.100 Kernel=13676.04 Mflops=24353.91
+centos7         : Column=000576 Fraction=0.195 Kernel=13341.55 Mflops=20041.97
+centos7         : Column=000768 Fraction=0.290 Kernel=12269.57 Mflops=18134.96
+centos7         : Column=000960 Fraction=0.385 Kernel=12048.35 Mflops=17193.62
+centos7         : Column=001152 Fraction=0.480 Kernel=11160.19 Mflops=16569.31
+centos7         : Column=001344 Fraction=0.595 Kernel= 9824.23 Mflops=16100.23
+centos7         : Column=001536 Fraction=0.675 Kernel= 8047.27 Mflops=15736.64
+centos7         : Column=001728 Fraction=0.795 Kernel= 5619.43 Mflops=15458.41
+centos7         : Column=001920 Fraction=0.895 Kernel= 2730.03 Mflops=15283.71
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        2000   192     1     1               0.35            1.51929e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:18 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:18 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0075263 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=68834.46
+centos7         : Column=000384 Fraction=0.080 Kernel=13343.01 Mflops=23680.22
+centos7         : Column=000576 Fraction=0.155 Kernel=11500.29 Mflops=18314.56
+centos7         : Column=000768 Fraction=0.235 Kernel=10630.42 Mflops=16157.17
+centos7         : Column=000960 Fraction=0.310 Kernel=10499.86 Mflops=15107.82
+centos7         : Column=001152 Fraction=0.385 Kernel=13325.89 Mflops=14925.61
+centos7         : Column=001344 Fraction=0.465 Kernel= 8182.53 Mflops=14175.08
+centos7         : Column=001536 Fraction=0.555 Kernel=10081.57 Mflops=13925.95
+centos7         : Column=001728 Fraction=0.615 Kernel=10441.98 Mflops=13793.71
+centos7         : Column=001920 Fraction=0.695 Kernel= 9404.71 Mflops=13684.04
+centos7         : Column=002112 Fraction=0.795 Kernel= 7339.40 Mflops=13580.94
+centos7         : Column=002304 Fraction=0.895 Kernel= 4546.55 Mflops=13493.58
+centos7         : Column=002496 Fraction=0.995 Kernel= 1428.06 Mflops=13438.87
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        2500   192     1     1               0.78            1.34104e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:18 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:19 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0060539 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=75124.78
+centos7         : Column=000384 Fraction=0.065 Kernel=14047.53 Mflops=24830.24
+centos7         : Column=000576 Fraction=0.130 Kernel=15168.90 Mflops=20994.34
+centos7         : Column=000768 Fraction=0.195 Kernel=14861.89 Mflops=19418.40
+centos7         : Column=000960 Fraction=0.260 Kernel=14637.98 Mflops=18557.39
+centos7         : Column=001152 Fraction=0.320 Kernel=14408.13 Mflops=18011.21
+centos7         : Column=001344 Fraction=0.385 Kernel=14123.73 Mflops=17628.84
+centos7         : Column=001536 Fraction=0.450 Kernel=13716.25 Mflops=17337.95
+centos7         : Column=001728 Fraction=0.515 Kernel=13061.05 Mflops=17095.62
+centos7         : Column=001920 Fraction=0.595 Kernel=12557.94 Mflops=16906.14
+centos7         : Column=002112 Fraction=0.655 Kernel=11662.17 Mflops=16745.96
+centos7         : Column=002496 Fraction=0.795 Kernel= 9744.01 Mflops=16493.58
+centos7         : Column=002688 Fraction=0.895 Kernel= 6383.11 Mflops=16399.53
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        3000   192     1     1               1.11            1.62732e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:20 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:21 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0059166 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=87302.13
+centos7         : Column=000384 Fraction=0.055 Kernel=14931.93 Mflops=26593.46
+centos7         : Column=000576 Fraction=0.110 Kernel=15718.91 Mflops=22098.92
+centos7         : Column=000768 Fraction=0.165 Kernel=15541.22 Mflops=20339.82
+centos7         : Column=000960 Fraction=0.220 Kernel=15234.93 Mflops=19359.22
+centos7         : Column=001152 Fraction=0.275 Kernel=15096.99 Mflops=18750.39
+centos7         : Column=001344 Fraction=0.330 Kernel=14803.56 Mflops=18315.92
+centos7         : Column=001536 Fraction=0.385 Kernel=14587.75 Mflops=17997.20
+centos7         : Column=001728 Fraction=0.440 Kernel=14329.72 Mflops=17752.23
+centos7         : Column=001920 Fraction=0.495 Kernel=13974.76 Mflops=17554.80
+centos7         : Column=002112 Fraction=0.555 Kernel=13474.69 Mflops=17388.43
+centos7         : Column=002304 Fraction=0.615 Kernel=12861.03 Mflops=17246.37
+centos7         : Column=002496 Fraction=0.675 Kernel=11974.83 Mflops=17120.57
+centos7         : Column=002880 Fraction=0.795 Kernel=10547.22 Mflops=16929.11
+centos7         : Column=003264 Fraction=0.895 Kernel= 6835.58 Mflops=16798.79
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        3500   192     1     1               1.71            1.67268e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:21 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:23 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0059144 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=117068.99
+centos7         : Column=000384 Fraction=0.050 Kernel=13957.46 Mflops=25970.93
+centos7         : Column=000576 Fraction=0.100 Kernel=15693.48 Mflops=21715.68
+centos7         : Column=000768 Fraction=0.145 Kernel=15490.85 Mflops=20018.15
+centos7         : Column=000960 Fraction=0.195 Kernel=15184.36 Mflops=19060.57
+centos7         : Column=001152 Fraction=0.240 Kernel=15203.87 Mflops=18487.93
+centos7         : Column=001344 Fraction=0.290 Kernel=15008.46 Mflops=18083.71
+centos7         : Column=001536 Fraction=0.340 Kernel=14942.38 Mflops=17795.60
+centos7         : Column=001728 Fraction=0.385 Kernel=14604.63 Mflops=17558.43
+centos7         : Column=001920 Fraction=0.435 Kernel=10355.03 Mflops=16972.58
+centos7         : Column=002112 Fraction=0.480 Kernel=12108.71 Mflops=16706.70
+centos7         : Column=002304 Fraction=0.535 Kernel=13614.79 Mflops=16588.72
+centos7         : Column=002496 Fraction=0.595 Kernel= 9466.03 Mflops=16290.09
+centos7         : Column=002688 Fraction=0.635 Kernel= 7997.78 Mflops=15983.13
+centos7         : Column=002880 Fraction=0.675 Kernel= 8765.87 Mflops=15805.69
+centos7         : Column=003264 Fraction=0.795 Kernel= 8594.95 Mflops=15598.65
+centos7         : Column=003648 Fraction=0.895 Kernel= 7591.42 Mflops=15507.84
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        4000   192     1     1               2.77            1.53930e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:24 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:27 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0057471 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=118721.59
+centos7         : Column=000384 Fraction=0.045 Kernel=12955.83 Mflops=24228.96
+centos7         : Column=000576 Fraction=0.090 Kernel=14339.38 Mflops=20038.41
+centos7         : Column=000768 Fraction=0.130 Kernel=13640.24 Mflops=18197.58
+centos7         : Column=000960 Fraction=0.175 Kernel=15793.96 Mflops=17757.41
+centos7         : Column=001152 Fraction=0.215 Kernel=15487.15 Mflops=17431.60
+centos7         : Column=001344 Fraction=0.260 Kernel=15569.68 Mflops=17221.37
+centos7         : Column=001536 Fraction=0.300 Kernel=15365.16 Mflops=17050.62
+centos7         : Column=001728 Fraction=0.345 Kernel=15228.04 Mflops=16913.22
+centos7         : Column=001920 Fraction=0.385 Kernel=15012.74 Mflops=16794.59
+centos7         : Column=002112 Fraction=0.430 Kernel=14866.27 Mflops=16695.24
+centos7         : Column=002304 Fraction=0.470 Kernel=14373.24 Mflops=16594.45
+centos7         : Column=002496 Fraction=0.515 Kernel=14330.08 Mflops=16514.61
+centos7         : Column=002688 Fraction=0.555 Kernel=14014.58 Mflops=16442.34
+centos7         : Column=002880 Fraction=0.615 Kernel=13590.69 Mflops=16375.18
+centos7         : Column=003072 Fraction=0.655 Kernel=13364.77 Mflops=16319.36
+centos7         : Column=003264 Fraction=0.695 Kernel=12534.58 Mflops=16263.03
+centos7         : Column=003648 Fraction=0.795 Kernel=11570.50 Mflops=16171.02
+centos7         : Column=004032 Fraction=0.895 Kernel= 9096.54 Mflops=16100.04
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        4500   192     1     1               3.80            1.59993e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:28 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:32 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0061501 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=140793.54
+centos7         : Column=000384 Fraction=0.040 Kernel=13179.89 Mflops=24928.03
+centos7         : Column=000576 Fraction=0.080 Kernel=16553.59 Mflops=21582.70
+centos7         : Column=000768 Fraction=0.120 Kernel=16508.69 Mflops=20219.78
+centos7         : Column=000960 Fraction=0.155 Kernel=16452.87 Mflops=19475.74
+centos7         : Column=001152 Fraction=0.195 Kernel=16232.40 Mflops=18976.22
+centos7         : Column=001344 Fraction=0.235 Kernel=15058.86 Mflops=18464.52
+centos7         : Column=001536 Fraction=0.270 Kernel=15635.13 Mflops=18176.66
+centos7         : Column=001728 Fraction=0.310 Kernel=16059.91 Mflops=18004.28
+centos7         : Column=001920 Fraction=0.350 Kernel=15921.05 Mflops=17862.46
+centos7         : Column=002112 Fraction=0.385 Kernel=13276.66 Mflops=17554.19
+centos7         : Column=002304 Fraction=0.425 Kernel=15515.30 Mflops=17456.43
+centos7         : Column=002496 Fraction=0.465 Kernel=15090.00 Mflops=17359.40
+centos7         : Column=002688 Fraction=0.515 Kernel=14780.29 Mflops=17270.00
+centos7         : Column=002880 Fraction=0.555 Kernel=11417.11 Mflops=17055.69
+centos7         : Column=003072 Fraction=0.595 Kernel=14579.10 Mflops=16997.83
+centos7         : Column=003264 Fraction=0.615 Kernel=14330.77 Mflops=16946.87
+centos7         : Column=003456 Fraction=0.655 Kernel=13953.57 Mflops=16900.52
+centos7         : Column=003648 Fraction=0.695 Kernel=13479.66 Mflops=16858.29
+centos7         : Column=004032 Fraction=0.795 Kernel=12547.77 Mflops=16785.60
+centos7         : Column=004608 Fraction=0.895 Kernel= 9787.55 Mflops=16704.65
+centos7         : Column=004992 Fraction=0.995 Kernel= 3653.29 Mflops=16675.94
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        5000   192     1     1               5.01            1.66408e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:33 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:38 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0055168 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=152101.64
+centos7         : Column=000384 Fraction=0.035 Kernel=16698.39 Mflops=30991.87
+centos7         : Column=000576 Fraction=0.070 Kernel=16844.07 Mflops=24606.57
+centos7         : Column=000768 Fraction=0.105 Kernel=15462.53 Mflops=21748.09
+centos7         : Column=000960 Fraction=0.140 Kernel=16124.35 Mflops=20530.26
+centos7         : Column=001152 Fraction=0.175 Kernel=15328.10 Mflops=19629.80
+centos7         : Column=001344 Fraction=0.210 Kernel=16360.58 Mflops=19207.19
+centos7         : Column=001536 Fraction=0.245 Kernel=16184.53 Mflops=18885.40
+centos7         : Column=001728 Fraction=0.280 Kernel=16215.68 Mflops=18650.57
+centos7         : Column=001920 Fraction=0.315 Kernel=16017.84 Mflops=18454.58
+centos7         : Column=002112 Fraction=0.350 Kernel=15943.85 Mflops=18296.53
+centos7         : Column=002304 Fraction=0.385 Kernel=15778.82 Mflops=18161.23
+centos7         : Column=002496 Fraction=0.420 Kernel=15681.13 Mflops=18047.74
+centos7         : Column=002688 Fraction=0.455 Kernel=15535.00 Mflops=17949.59
+centos7         : Column=002880 Fraction=0.490 Kernel=15300.89 Mflops=17861.02
+centos7         : Column=003072 Fraction=0.535 Kernel=15077.93 Mflops=17781.78
+centos7         : Column=003264 Fraction=0.575 Kernel=14912.67 Mflops=17712.96
+centos7         : Column=003456 Fraction=0.595 Kernel=14477.31 Mflops=17647.00
+centos7         : Column=003648 Fraction=0.635 Kernel=14314.78 Mflops=17591.02
+centos7         : Column=003840 Fraction=0.675 Kernel=14134.42 Mflops=17543.88
+centos7         : Column=004416 Fraction=0.795 Kernel=13074.02 Mflops=17424.79
+centos7         : Column=004992 Fraction=0.895 Kernel= 9888.95 Mflops=17333.99
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        5500   192     1     1               6.43            1.72622e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:40 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:46 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0072294 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=154612.44
+centos7         : Column=000384 Fraction=0.035 Kernel=15505.84 Mflops=28967.80
+centos7         : Column=000576 Fraction=0.065 Kernel=16992.03 Mflops=23758.95
+centos7         : Column=000768 Fraction=0.100 Kernel=16952.63 Mflops=21792.98
+centos7         : Column=000960 Fraction=0.130 Kernel=16863.51 Mflops=20745.52
+centos7         : Column=001152 Fraction=0.160 Kernel=15850.97 Mflops=19897.80
+centos7         : Column=001344 Fraction=0.195 Kernel=16526.09 Mflops=19449.19
+centos7         : Column=001536 Fraction=0.225 Kernel=16517.51 Mflops=19129.06
+centos7         : Column=001728 Fraction=0.260 Kernel=16416.11 Mflops=18880.60
+centos7         : Column=001920 Fraction=0.290 Kernel=16323.98 Mflops=18682.09
+centos7         : Column=002112 Fraction=0.320 Kernel=14104.16 Mflops=18335.96
+centos7         : Column=002304 Fraction=0.355 Kernel=13624.37 Mflops=18023.98
+centos7         : Column=002496 Fraction=0.385 Kernel=15618.75 Mflops=17904.96
+centos7         : Column=002688 Fraction=0.420 Kernel=15879.82 Mflops=17820.32
+centos7         : Column=002880 Fraction=0.450 Kernel=15685.68 Mflops=17742.80
+centos7         : Column=003072 Fraction=0.480 Kernel=15422.60 Mflops=17669.43
+centos7         : Column=003264 Fraction=0.515 Kernel=15314.37 Mflops=17605.44
+centos7         : Column=003456 Fraction=0.555 Kernel=13216.89 Mflops=17488.56
+centos7         : Column=003648 Fraction=0.595 Kernel=15176.17 Mflops=17443.34
+centos7         : Column=003840 Fraction=0.615 Kernel=13685.51 Mflops=17375.38
+centos7         : Column=004032 Fraction=0.655 Kernel=11075.32 Mflops=17259.68
+centos7         : Column=004224 Fraction=0.675 Kernel=14066.02 Mflops=17222.13
+centos7         : Column=004800 Fraction=0.795 Kernel=11883.28 Mflops=17083.37
+centos7         : Column=005376 Fraction=0.895 Kernel= 8013.24 Mflops=16951.31
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        6000   192     1     1               8.54            1.68630e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:48 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:23:57 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0052425 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=210433.86
+centos7         : Column=000384 Fraction=0.030 Kernel=16577.18 Mflops=31553.19
+centos7         : Column=000576 Fraction=0.060 Kernel=17008.40 Mflops=24893.37
+centos7         : Column=000768 Fraction=0.090 Kernel=17040.95 Mflops=22538.59
+centos7         : Column=000960 Fraction=0.120 Kernel=14936.01 Mflops=20695.67
+centos7         : Column=001152 Fraction=0.150 Kernel=16905.04 Mflops=20064.34
+centos7         : Column=001344 Fraction=0.180 Kernel=15110.61 Mflops=19332.24
+centos7         : Column=001536 Fraction=0.210 Kernel=14054.78 Mflops=18653.92
+centos7         : Column=001728 Fraction=0.240 Kernel=15706.91 Mflops=18370.40
+centos7         : Column=001920 Fraction=0.270 Kernel=16736.95 Mflops=18244.78
+centos7         : Column=002112 Fraction=0.300 Kernel=16608.91 Mflops=18135.97
+centos7         : Column=002304 Fraction=0.325 Kernel=16624.01 Mflops=18049.18
+centos7         : Column=002496 Fraction=0.355 Kernel=15011.29 Mflops=17882.64
+centos7         : Column=002688 Fraction=0.385 Kernel=12181.70 Mflops=17552.95
+centos7         : Column=002880 Fraction=0.415 Kernel=16308.65 Mflops=17506.17
+centos7         : Column=003072 Fraction=0.445 Kernel=16185.49 Mflops=17462.67
+centos7         : Column=003264 Fraction=0.475 Kernel=15978.18 Mflops=17419.67
+centos7         : Column=003456 Fraction=0.515 Kernel=15922.11 Mflops=17381.98
+centos7         : Column=003648 Fraction=0.535 Kernel=15751.32 Mflops=17346.21
+centos7         : Column=003840 Fraction=0.575 Kernel=15545.52 Mflops=17311.90
+centos7         : Column=004032 Fraction=0.595 Kernel=15379.67 Mflops=17280.22
+centos7         : Column=004224 Fraction=0.635 Kernel=14994.18 Mflops=17247.78
+centos7         : Column=004416 Fraction=0.655 Kernel=14879.01 Mflops=17219.50
+centos7         : Column=004608 Fraction=0.695 Kernel=14579.50 Mflops=17193.02
+centos7         : Column=005184 Fraction=0.795 Kernel=13850.15 Mflops=17124.82
+centos7         : Column=005952 Fraction=0.895 Kernel=11538.96 Mflops=17061.19
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        6500   192     1     1              10.77            1.70067e+01
+HPL_pdgesv() start time Tue Jan  9 06:23:59 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:24:10 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0065683 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=193356.15
+centos7         : Column=000384 Fraction=0.030 Kernel=16210.05 Mflops=30642.69
+centos7         : Column=000576 Fraction=0.055 Kernel=16089.48 Mflops=23858.54
+centos7         : Column=000768 Fraction=0.085 Kernel=17020.70 Mflops=21852.79
+centos7         : Column=000960 Fraction=0.110 Kernel=14919.69 Mflops=20193.45
+centos7         : Column=001152 Fraction=0.140 Kernel=14546.30 Mflops=19136.14
+centos7         : Column=001344 Fraction=0.165 Kernel=14896.87 Mflops=18516.46
+centos7         : Column=001536 Fraction=0.195 Kernel=17014.28 Mflops=18356.00
+centos7         : Column=001728 Fraction=0.220 Kernel=15932.04 Mflops=18123.04
+centos7         : Column=001920 Fraction=0.250 Kernel=16764.13 Mflops=18016.68
+centos7         : Column=002112 Fraction=0.275 Kernel=16712.34 Mflops=17928.16
+centos7         : Column=002304 Fraction=0.305 Kernel=14387.19 Mflops=17687.66
+centos7         : Column=002496 Fraction=0.330 Kernel=16526.72 Mflops=17627.67
+centos7         : Column=002688 Fraction=0.360 Kernel=16486.86 Mflops=17575.87
+centos7         : Column=002880 Fraction=0.385 Kernel=16370.94 Mflops=17527.50
+centos7         : Column=003072 Fraction=0.415 Kernel=16335.35 Mflops=17485.34
+centos7         : Column=003264 Fraction=0.440 Kernel=16205.18 Mflops=17445.26
+centos7         : Column=003456 Fraction=0.470 Kernel=16067.60 Mflops=17407.09
+centos7         : Column=003648 Fraction=0.495 Kernel=15998.35 Mflops=17372.77
+centos7         : Column=003840 Fraction=0.535 Kernel=15865.95 Mflops=17340.47
+centos7         : Column=004032 Fraction=0.555 Kernel=15682.51 Mflops=17309.23
+centos7         : Column=004224 Fraction=0.595 Kernel=15543.34 Mflops=17280.22
+centos7         : Column=004416 Fraction=0.615 Kernel=15355.38 Mflops=17252.74
+centos7         : Column=004608 Fraction=0.635 Kernel=15169.18 Mflops=17227.11
+centos7         : Column=004800 Fraction=0.675 Kernel=14862.32 Mflops=17202.09
+centos7         : Column=004992 Fraction=0.695 Kernel=14665.22 Mflops=17179.44
+centos7         : Column=005568 Fraction=0.795 Kernel=13994.13 Mflops=17120.31
+centos7         : Column=006336 Fraction=0.895 Kernel=12056.26 Mflops=17065.02
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        7000   192     1     1              13.44            1.70151e+01
+HPL_pdgesv() start time Tue Jan  9 06:24:12 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:24:26 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0046259 ...... PASSED
+centos7         : Column=000192 Fraction=0.005 Kernel=    0.00 Mflops=198300.08
+centos7         : Column=000384 Fraction=0.030 Kernel=17234.28 Mflops=32427.98
+centos7         : Column=000576 Fraction=0.055 Kernel=17398.66 Mflops=25479.97
+centos7         : Column=000768 Fraction=0.080 Kernel=17393.39 Mflops=23018.88
+centos7         : Column=000960 Fraction=0.105 Kernel=17347.18 Mflops=21749.88
+centos7         : Column=001152 Fraction=0.130 Kernel=17270.31 Mflops=20966.55
+centos7         : Column=001344 Fraction=0.155 Kernel=17276.21 Mflops=20445.13
+centos7         : Column=001536 Fraction=0.180 Kernel=14905.53 Mflops=19706.44
+centos7         : Column=001728 Fraction=0.205 Kernel=15791.07 Mflops=19293.12
+centos7         : Column=001920 Fraction=0.235 Kernel=15456.10 Mflops=18941.42
+centos7         : Column=002112 Fraction=0.260 Kernel=16423.22 Mflops=18753.76
+centos7         : Column=002304 Fraction=0.285 Kernel=15114.30 Mflops=18498.56
+centos7         : Column=002496 Fraction=0.310 Kernel=16594.10 Mflops=18391.92
+centos7         : Column=002688 Fraction=0.335 Kernel=16708.75 Mflops=18309.48
+centos7         : Column=002880 Fraction=0.360 Kernel=16653.43 Mflops=18237.60
+centos7         : Column=003072 Fraction=0.385 Kernel=16553.14 Mflops=18172.52
+centos7         : Column=003264 Fraction=0.410 Kernel=16474.38 Mflops=18114.16
+centos7         : Column=003456 Fraction=0.440 Kernel=16429.65 Mflops=18062.75
+centos7         : Column=003648 Fraction=0.465 Kernel=16262.95 Mflops=18013.67
+centos7         : Column=003840 Fraction=0.490 Kernel=16180.53 Mflops=17969.29
+centos7         : Column=004032 Fraction=0.515 Kernel=16017.23 Mflops=17927.23
+centos7         : Column=004224 Fraction=0.555 Kernel=15868.09 Mflops=17887.91
+centos7         : Column=004416 Fraction=0.575 Kernel=15785.06 Mflops=17852.61
+centos7         : Column=004608 Fraction=0.595 Kernel=12641.78 Mflops=17757.92
+centos7         : Column=004800 Fraction=0.615 Kernel=14186.19 Mflops=17707.99
+centos7         : Column=004992 Fraction=0.655 Kernel=13368.08 Mflops=17652.84
+centos7         : Column=005184 Fraction=0.675 Kernel=15094.49 Mflops=17628.38
+centos7         : Column=005376 Fraction=0.695 Kernel=14813.18 Mflops=17605.33
+centos7         : Column=006144 Fraction=0.795 Kernel=14090.52 Mflops=17531.41
+centos7         : Column=006720 Fraction=0.895 Kernel=12012.35 Mflops=17492.91
+centos7         : Column=007488 Fraction=0.995 Kernel= 7281.51 Mflops=17465.35
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WC00C2R2        7500   192     1     1              16.13            1.74395e+01
+HPL_pdgesv() start time Tue Jan  9 06:24:29 2018
+
+HPL_pdgesv() end time   Tue Jan  9 06:24:45 2018
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0055431 ...... PASSED
+================================================================================
+
+Finished     14 tests with the following results:
+             14 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
